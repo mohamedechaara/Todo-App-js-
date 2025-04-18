@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header"> 
+        <h1>TODO</h1>  
+        <div class="moon">
+          <img src="images/icon-moon.svg" alt="icon-moon" style="cursor: pointer;"   id="moon">
+          <img src="images/icon-sun.svg" style="display: none;" id="suun"/>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="input">
+        <input type="text" placeholder="Create a new todo" id="input-1">
+        <div class="check">  
+        </div>
+      </div>
+      <div class="main">
+        <ul class="list">
+          <!-- <li>
+            <input type="checkbox" id="checkbox1" class="checkbox" hidden>
+            <label for="checkbox1" class="checkbox-label"><span class="span-check"></span></label>
+            Completer online JavaScript
+            <img src="images/icon-cross.svg" class="delet">
+          </li> -->
+        </ul>
+        
+        <div class="filters">
+          <span class="filter" id="items-left">0 items left</span>
+          <div class="filter-group" style="display: flex;gap: 15px;">
+            <span class=" filter selected" id="All">All </span>
+            <span class=" filter" id="Active">Active </span>
+            <span class="filter" id="Completed">Completed</span>
+          </div>
+          <div class="filter" id="Clear" style="text-align: center; padding: 10px; cursor: pointer;">Clear Completed</div>
+        </div>
+      </div>
+      <div class="drag">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </section>
+  </div>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mohamed Ech-Chara</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Josefin Sans";
+}
+header{
+    color: hsl(0, 0%, 98%);
+    height: 250px;
+    background-image: url(images/bg-desktop-light.jpg);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 300px;
+    top: 45px;
+}
+.header h1{
+    font-size: 40px;
+    letter-spacing: 8px;
+}
+section{
+    width: 90%;
+    max-width: 480px;
+    margin: auto;
+    position: relative;
+    top: -140px;
+}
+.input{
+    margin-bottom: 20px;
+    width: 475px;
+    height: 55px; 
+    display: block;
+    align-items: center;  
+    background-color: white;
+    border-radius: 5px;
+}
+.input input{
+    margin-left: 70px;
+    width: 400px;
+    height: 51px;
+    left: auto;
+    outline: none;
+    border: none;  
+}
+.check{
+    position: relative;
+    top: -37px;
+    left: 35px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #777;
+}
+.check:hover{
+    cursor: pointer;
+    border: 3px solid transparent;
+    background: 
+    linear-gradient(black)padding-box,
+    linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%,65%))border-box;
+}
+.main{
+    width: 479px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px darkgray;
+    background-color: white;
+}
+ul{
+    list-style: none;
+}
+li{
+    font-size: 18px;
+    display: flex;
+    width: 90%;
+    overflow: hidden;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    padding: 20px 20px;
+    border-bottom: 1px solid #eee;
+    gap: 20px;
+    position: relative;
+}
+.delet{
+    display: none;
+    position: absolute;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+} 
+li:hover .delet{
+    display: block;
+}
+.checkbox-label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid hsl(236, 9%, 61%);
+    position: relative;
+    cursor: pointer;
+}
+ label:hover .checkbox-label{  
+    border: 1px solid transparent;
+    background:  solid linear-gradient(white)padding-box,
+    linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%,65%))border-box;
+}
+.span-check {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.checkbox:checked + .checkbox-label .span-check {
+    background: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.checkbox:checked + .checkbox-label .span-check::after {
+    content: url('images/icon-check.svg');
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+}
+.checkbox:checked + .checkbox-label + span {
+    text-decoration: line-through;
+    color: hsl(233, 11%, 84%);
+}
+.filters{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 2px;
+    font-size: 0.9em;
+    color: hsl(236, 9%, 61%);
+    align-items: center;
+
+}
+.filters span{
+    cursor: pointer;
+    align-items: center;
+}
+.filter.selected {
+    color: hsl(220, 98%, 61%); 
+}
+.drag{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    color: hsl(236, 9%, 61%);
+}
+@media (max-width:370px) {
+    body {
+        background-size: cover;
+        overflow-x: hidden;
+    }
+    header {
+        height: 200px;
+        background-image: url(images/bg-mobile-light.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        width: 90%;
+        margin: auto;
+        top: 30px;
+    }
+    .header h1 {
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+    section {
+        width: 90%;
+        left: 0%;
+        top: -100px;
+    }
+    .drag{
+        position: relative;
+        top: 40px;
+    }
+    .input {
+        width: 100%;
+        height: 50px;
+    }
+    .input input {
+        margin-left: 55px;
+        width: 70%;
+        height: 48px;
+        font-size: 14px;
+    }
+    .check {
+        top: -35px;
+        left: 25px;
+        width: 18px;
+        height: 18px;
+    }
+    li {
+        padding: 15px 10px;
+        font-size: 14px;
+        gap: 10px;
+    }
+    .delet {
+        right: 15px;
+    }
+    .main {
+        width: 100%;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    #items-left, #Clear {
+        position: absolute;
+        bottom: 10px;
+        font-size: 0.75em;
+        color: hsl(236, 9%, 61%);
+    }
+    #items-left {
+        left: 15px;
+        bottom: 15px;
+    }
+    #Clear {
+       right: 15px;
+       bottom: 4px;
+    }
+    .filter-group{
+        font-weight: bold;
+        position: absolute;
+        bottom: -50px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 5px hsl(236, 9%, 61%) ;
+        display: flex;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 0.85em;
+    }
+  }
